@@ -1,27 +1,36 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import InstituteDemo from "./pages/InstituteDemo";
+import UserDemo from "./pages/UserDemo";
+import HedDemo from "./pages/HedDemo";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Dashboard from "./pages/Dashboard";
+import Upload from "./pages/Upload";
+import Alert from "./pages/Alert";
 
-import Navbar from "./components/NavBar";
-import Hero from "./components/Hero";
-import Features from "./components/Features";
-import "./App.css";
 
-const App = () => {
+function App() {
   return (
     <Router>
-      <Navbar />
-      <Hero />
-      <Features />
-
-      <Routes>
-        <Route path="/institute-demo" element={<div>Institute Demo Page</div>} />
-        <Route path="/user-demo" element={<div>User Demo Page</div>} />
-        <Route path="/hed-demo" element={<div>HED Demo Page</div>} />
-        <Route path="/login" element={<div>Login Page</div>} />
-        <Route path="/signup" element={<div>Signup Page</div>} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Home" element={<Home />} />
+          <Route path="/institute-demo" element={<InstituteDemo />} />
+          <Route path="/user-demo" element={<UserDemo />} />
+          <Route path="/hed-demo" element={<HedDemo />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/institute-demo/dashboard" element={<Dashboard />} />
+          <Route path="/institute-demo/upload" element={<Upload/>} />
+          <Route path="/institute-demo/alert" element={<Alert/>} />
+          <Route path="/hed-demo/*" element={<HedDemo />} />
+        </Routes>
+      </main>
     </Router>
   );
-};
+}
 
 export default App;
