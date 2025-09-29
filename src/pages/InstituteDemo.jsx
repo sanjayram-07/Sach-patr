@@ -33,8 +33,6 @@ function InstituteDemo() {
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="upload" element={<UploadFiles />} />
             <Route path="alert" element={<Alert/>} />
-
-            
             <Route path="*" element={<Navigate to="upload" replace />} />
           </Routes>
         </main>

@@ -34,7 +34,7 @@ const Login = () => {
     redirectAfterLogin();
   };
 
-  // Redirect based on login type
+ 
   const redirectAfterLogin = () => {
     switch (loginType) {
       case "user":
@@ -65,7 +65,7 @@ const Login = () => {
               <span className="brand">SACH-PATR</span>
             </h2>
 
-            {/* Three login type buttons */}
+            
             <div className="login-type">
               {["user", "institute", "admin"].map((type) => (
                 <button
